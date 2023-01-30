@@ -56,7 +56,7 @@ while coffeeChoice != "off":
     def check_resources(resource, request):
         i = 0
         for key in resource:
-            if resource[key] < request[i]:
+            if resource[key] <= request[i]:
                 print(f"Sorry there is not enough {key}.")
             resource[key] = resources[key]-request[i]
             i += 1
